@@ -123,4 +123,82 @@ new Promise(function () {
 
 let promiseAll = Promise.all([promise, tryCatch]);
 
-// 이터러블 객체의 프라미스들을 가져와서 
+// 이터러블 객체의 프라미스들을 가져와서 처리할 수 있다.
+
+// async await
+// 프라미스를 좀 더 편하게 사용할 수 있는 문법이다.
+// async는 함수 앞에 붙여서 해당 함수가 프라미스를 리턴하도록(만약 값을 반환하더라도 resolved promise로 값을 감싼다) 한다
+
+async function f() {
+  let value = await new Promise((resolve, reject) => { setTimeout(() => {
+  resolve(1)  
+  }, 1000); })
+
+  console.log(value)
+}
+
+f()
+
+function loadJson(url) {
+  return fetch(url)
+    .then(response => {
+      if (response.status == 200) {
+        return response.json();
+      } else {
+        throw new Error(response.status);
+      }
+    })
+}
+
+// 다음과 같은 프로미스를 아래와 같이 변환 가능하다.
+
+loadJson('no-such-user.json')
+  .catch(alert); // Error: 404
+
+async function loadJsonRefactor(url) {
+  let response = await fetch(url)
+
+  if(response.status == 200) {
+    let json = await response.json();
+    return json
+  }
+}
+
+loadJson('no-such-user.json')
+.catch(alert)
+
+function loadJson(url) {
+  return fetch(url)
+    .then(response => response.json());
+}
+
+function loadGithubUser(name) {
+  return fetch(`https://api.github.com/users/${name}`)
+    .then(response => response.json());
+}
+
+function showAvatar(githubUser) {
+  return new Promise(function(resolve, reject) {
+    let img = document.createElement('img');
+    img.src = githubUser.avatar_url;
+    img.className = "promise-avatar-example";
+    document.body.append(img);
+
+    setTimeout(() => {
+      img.remove();
+      resolve(githubUser);
+    }, 3000);
+  });
+}
+
+async function loadJsonAsync(url) {
+  let url = await fetch(url)
+
+  if (url.status == 200) {
+    return url.json();
+  } else {
+    throw new Error(url.status);
+  }
+}
+
+d
