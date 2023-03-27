@@ -8,8 +8,10 @@
   "dependencies": {
     "eslint-config-airbnb": "^19.0.4",
     "ts-node": "^10.9.1",
-    "tsc-watch": "^6.0.0"
+    "tsc-watch": "^6.0.0",
+    "yarn": "^1.22.19"
   },
+  "type": "module",
   "eslintConfig": {
     "parserOptions": {
       "parser": "babel-eslint",

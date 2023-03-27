@@ -1,4 +1,4 @@
-const util = require('util');
+const util = require('node-study/3.5_url/3.5.6_util/util');
 const crypto = require('crypto');
 
 const dontUseMe = util.deprecate((x, y) => {
