@@ -1,5 +1,4 @@
-const crypto = require('crypto');
-const buffer = require("buffer");
+import {crypto} from 'node:crypto';
 const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY || 'abcdefghijklmnop'.repeat(2);
 const algorithm = 'aes-256-cbc';
 const IV_LENGTH = 16;

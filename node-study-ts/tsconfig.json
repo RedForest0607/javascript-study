@@ -6,8 +6,12 @@
     "rootDir": "./",
     "outDir": "./bin",
     "lib": ["es6"],
+    "preserveValueImports": false
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "ts-node": {
+    "esm": true
+  }
 }

@@ -1,7 +1,9 @@
 {
   "devDependencies": {
     "@types/node": "^18.15.10",
-    "eslint": "^8.34.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
     "prettier": "2.8.4",
     "typescript": "^5.0.2"
   },
@@ -11,7 +13,6 @@
     "tsc-watch": "^6.0.0",
     "yarn": "^1.22.19"
   },
-  "type": "module",
   "eslintConfig": {
     "parserOptions": {
       "parser": "babel-eslint",
