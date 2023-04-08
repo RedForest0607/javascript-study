@@ -196,3 +196,5 @@ dist
 # This file is just for test
 playground.js
 # End of https://www.toptal.com/developers/gitignore/api/macos,node,visualstudiocode
+
+/.idea/

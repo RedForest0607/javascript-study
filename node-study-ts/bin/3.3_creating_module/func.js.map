@@ -1,0 +1,1 @@
+{"version":3,"file":"func.js","sourceRoot":"","sources":["../../3.3_creating_module/func.ts"],"names":[],"mappings":"AAAM,IAAA,KAAoB,OAAO,CAAC,OAAO,CAAC,EAAnC,MAAM,YAAA,EAAE,OAAO,aAAoB,CAAC;AAE3C,SAAS,cAAc,CAAC,GAAG;IACvB,IAAI,GAAG,GAAG,CAAC,EAAE;QACT,OAAO,MAAM,CAAC;KACjB;IACD,OAAO,OAAO,CAAC;AACnB,CAAC;AAED,MAAM,CAAC,OAAO,GAAG,cAAc,CAAC"}
